@@ -8,17 +8,17 @@ int det(int a[][2]){
     return d;
 }
 
-void cofator(int a[][3], int cof[][3], int n) {
+void cofator(int a[][3], int cof[][3], int area) {
     int i, j, x, y, k, p;
     int sub_m[2][2];
 
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 0; i < area; i++) {
+        for (j = 0; j < area; j++) {
             k = 0;
-            for (x = 0; x < n; x++) {
+            for (x = 0; x < area; x++) {
                 if (x == i) continue;
                 p = 0;
-                for (y = 0; y < n; y++) {
+                for (y = 0; y < area; y++) {
                     if (y == j) continue;
                     sub_m[k][p] = a[x][y];
                     p++;
@@ -31,19 +31,19 @@ void cofator(int a[][3], int cof[][3], int n) {
     }
 }
 
-void transp(int a[][3], int b[][3], int n) {
+void transp(int a[][3], int b[][3], int area) {
     int i, j;
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 0; i < area; i++) {
+        for (j = 0; j < area; j++) {
             b[i][j] = a[j][i];
         }
     }
 }
 
-void adjunta(int a[][3], int b[][3], int n) {
+void adjunta(int a[][3], int b[][3], int area) {
     int arm[3][3];
-    cofator(a, arm, n);
-    transp(arm, b, n);
+    cofator(a, arm, area);
+    transp(arm, b, area);
 }
 
 int main() {
@@ -64,7 +64,7 @@ int main() {
     printf("\n");
     
     
-    printf("A adjunta de A é:\n");
+    printf("A adjunta de A Ã©:\n");
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             printf("%d ", adj_a[i][j]);
@@ -73,5 +73,4 @@ int main() {
     }
     return 0;
 }
-
 
