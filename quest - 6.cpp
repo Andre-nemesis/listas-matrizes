@@ -8,17 +8,17 @@ int det(int a[][1]){
     return d;
 }
 
-void cofator(int a[][c], int cof[][c], int n) {
+void cofator(int a[][c], int cof[][c], int area) {
     int i, j, x, y, k, p;
     int sub_m[1][1];
 
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 0; i < area; i++) {
+        for (j = 0; j < area; j++) {
             k = 0;
-            for (x = 0; x < n; x++) {
+            for (x = 0; x < area; x++) {
                 if (x == i) continue;
                 p = 0;
-                for (y = 0; y < n; y++) {
+                for (y = 0; y < area; y++) {
                     if (y == j) continue;
                     sub_m[k][p] = a[x][y];
                     p++;
@@ -47,7 +47,7 @@ int main() {
     
     printf("\n");
 
-    printf("O cofator de A é:\n");
+    printf("O cofator de A Ã©:\n");
     for (i = 0; i < l; i++) {
         for (j = 0; j < c; j++) printf("%d ", adj_a[i][j]);
         printf("\n");
