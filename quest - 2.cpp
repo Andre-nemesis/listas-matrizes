@@ -7,7 +7,7 @@ void mult(int arm[][2],int a[][2],int b[][2],int area) {
 	for(int i = 0;i < area;i++){
 		for(int j = 0; j < area;j++) {
 			arm[i][j] = 0;	
-			for(int p = 0;p < c;p++) arm[i][j] += a[i][p] * b[p][j]; 	
+			for(int p = 0;p < area;p++) arm[i][j] += a[i][p] * b[p][j]; 	
 		}
 	}
 }
@@ -34,10 +34,10 @@ int main(){
 		printf("\n");
 	} 
 	printf("\n");
-	printf("Resultado da Multiplicação da Matriz A com a Matriz B é:\n");
+	printf("Resultado da MultiplicaÃ§Ã£o da Matriz A com a Matriz B Ã©:\n");
 	
 	for(i = 0;i < l;i++) {
-		for(j = 0; j < c;j++) printf("%d\t",result[i][j]);
+		for(j = 0; j < c;j++) printf("%d ",result[i][j]);
 		printf("\n");
 	}
 	
