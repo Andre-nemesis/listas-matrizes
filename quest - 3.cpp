@@ -5,8 +5,8 @@
 
 void inverter(int a[][2],int arm[][2],int area) {
 	int aux;
-	for(int i = 0;i < l;i++) {
-		for(int j = 0;j < c;j++) {
+	for(int i = 0;i < area;i++) {
+		for(int j = 0;j < area;j++) {
 			aux = a[0][0];
 			if(i == 0 && j == 0) arm[i][j] = a[l-1][c-1];
 			if (i == 0 && j == 1) arm[i][j] = -a[i][j];
@@ -31,7 +31,7 @@ int main (){
 	}
 	printf("\n");
 	
-	printf("Matriz Inversa da Matriz A é:\n");
+	printf("Matriz Inversa da Matriz A Ã©:\n");
 	for(i = 0;i<l;i++) {
 		for(j = 0;j<c;j++) printf("%d ",matriz_inv[i][j]);
 		printf("\n");
