@@ -5,7 +5,7 @@
 
 void reflexo(int a[][2], int r[][2], int area) {
     int i, j;
-    for (i = 0; i < area; i++) for (j = 0; j < area; j++) r[i][j] = a[i][n-1-j];   
+    for (i = 0; i < area; i++) for (j = 0; j < area; j++) r[i][j] = a[i][area-1-j];   
 }
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
     
     printf("Matriz A:\n");
     for (i = 0; i < l; i++) {
-        for (j = 0; j < c; j++) printf("%d", matriz_a[i][j]);
+        for (j = 0; j < c; j++) printf("%d ", matriz_a[i][j]);
         printf("\n");
     }
     
@@ -27,7 +27,7 @@ int main() {
     printf("A matriz de Reflexão da Matriz A é:\n");
     
     for (i = 0; i < l; i++) {
-        for (j = 0; j < c; j++) printf("%d", Reflx[i][j]);
+        for (j = 0; j < c; j++) printf("%d ", Reflx[i][j]);
         printf("\n");
     }
     
