@@ -3,9 +3,9 @@
 #define l 2
 #define c 2
 
-void reflexo(int a[][2], int r[][2], int n) {
+void reflexo(int a[][2], int r[][2], int area) {
     int i, j;
-    for (i = 0; i < n; i++) for (j = 0; j < n; j++) r[i][j] = a[i][n-1-j];   
+    for (i = 0; i < area; i++) for (j = 0; j < area; j++) r[i][j] = a[i][n-1-j];   
 }
 
 int main() {
@@ -24,7 +24,7 @@ int main() {
     
     printf("\n");
     
-    printf("A matriz de Reflexão da Matriz A é:\n");
+    printf("A matriz de ReflexÃ£o da Matriz A Ã©:\n");
     
     for (i = 0; i < l; i++) {
         for (j = 0; j < c; j++) printf("%d", Reflx[i][j]);
